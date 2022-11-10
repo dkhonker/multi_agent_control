@@ -147,7 +147,6 @@ while (1)
     [F6, M6] = controller6(time , true_s(:, 6), s_des(:, 6));
 
     if (i >= length(t)*4) || (time >= time_tol)
-       diso("fucck")
        save('./readonly/6formation_results.mat', 'time','thtraj1', 'ehtraj1',  'thtraj2', 'ehtraj2', 'thtraj3', 'ehtraj3', ...
             'thtraj4', 'ehtraj4','thtraj5', 'ehtraj5', 'thtraj6', 'ehtraj6', 'thvx1', 'ehvx1', 'thvx2', 'ehvx2','thvx3', 'ehvx3', ...
             'thvx4', 'ehvx4','thvx5', 'ehvx5','thvx6', 'ehvx6','thvy1', 'ehvy1','thvy2', 'ehvy2','thvy3', 'ehvy3','thvy4', 'ehvy4', ...
@@ -1027,7 +1026,7 @@ while (1)
             thvx3.X = time; thvx3.Y = true_v3(1);
             ehvx3.X = time; ehvx3.Y = des_v3(1);
             thvy3.X = time; thvy3.Y = true_v3(2);
-            ehvy3.X = time; ehvy3.Y = des_v3(12);
+            ehvy3.X = time; ehvy3.Y = des_v3(2);
             thvz3.X = time; thvz3.Y = true_v3(3);
             ehvz3.X = time; ehvz3.Y = des_v3(3);
             
@@ -1069,7 +1068,7 @@ while (1)
             thvx3.X = [thvx3.X, time]; thvx3.Y = [thvx3.Y, true_v3(1)];
             ehvx3.X = [ehvx3.X, time]; ehvx3.Y = [ehvx3.Y, des_v3(1)];
             thvy3.X = [thvy3.X, time]; thvy3.Y = [thvy3.Y, true_v3(2)];
-            ehvy3.X = [ehvy3.X, time]; ehvy3.Y = [ehvy3.Y, des_v3(12)];
+            ehvy3.X = [ehvy3.X, time]; ehvy3.Y = [ehvy3.Y, des_v3(2)];
             thvz3.X = [thvz3.X, time]; thvz3.Y = [thvz3.Y, true_v3(3)];
             ehvz3.X = [ehvz3.X, time]; ehvz3.Y = [ehvz3.Y, des_v3(3)];
            
@@ -1117,7 +1116,7 @@ while (1)
         true_p6 = true_s(1:3, 6);
         des_p6 = s_des(1:3, 6);
         
-        if ~pis_init 
+        if ~vis_init 
             thpx1.X = time; thpx1.Y = true_p1(1);
             ehpx1.X = time; ehpx1.Y = des_p1(1);
             thpy1.X = time; thpy1.Y = true_p1(2);
@@ -1135,7 +1134,7 @@ while (1)
             thpx3.X = time; thpx3.Y = true_p3(1);
             ehpx3.X = time; ehpx3.Y = des_p3(1);
             thpy3.X = time; thpy3.Y = true_p3(2);
-            ehpy3.X = time; ehpy3.Y = des_p3(12);
+            ehpy3.X = time; ehpy3.Y = des_p3(2);
             thpz3.X = time; thpz3.Y = true_p3(3);
             ehpz3.X = time; ehpz3.Y = des_p3(3);
             
@@ -1177,7 +1176,7 @@ while (1)
             thpx3.X = [thpx3.X, time]; thpx3.Y = [thpx3.Y, true_p3(1)];
             ehpx3.X = [ehpx3.X, time]; ehpx3.Y = [ehpx3.Y, des_p3(1)];
             thpy3.X = [thpy3.X, time]; thpy3.Y = [thpy3.Y, true_p3(2)];
-            ehpy3.X = [ehpy3.X, time]; ehpy3.Y = [ehpy3.Y, des_p3(12)];
+            ehpy3.X = [ehpy3.X, time]; ehpy3.Y = [ehpy3.Y, des_p3(2)];
             thpz3.X = [thpz3.X, time]; thpz3.Y = [thpz3.Y, true_p3(3)];
             ehpz3.X = [ehpz3.X, time]; ehpz3.Y = [ehpz3.Y, des_p3(3)];
            
