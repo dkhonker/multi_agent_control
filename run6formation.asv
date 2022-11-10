@@ -1052,47 +1052,51 @@ while (1)
             thvz6.X = time; thvz6.Y = true_v6(3);
             ehvz6.X = time; ehvz6.Y = des_v6(3);
         else
+            thvx1.X = [thvx1.X, time];thvx1.Y = [thvx1.Y, true_v1(1)];
+            ehvx1.X = [ehvx1.X, time];ehvx1.Y = [ehvx1.Y, des_v1(1)];
+            
+            %---
             thvx1.X = [thvx1.X, time]; thvx1.Y = [thvx1.Y, true_v1(1)];
             ehvx1.X = [ehvx1.X, time]; ehvx1.Y = [ehvx1.Y, des_v1(1)];
             thvy1.X = [thvy1.X, time]; thvy1.Y = [thvx1.Y, true_v1(2)];
             ehvy1.X = [ehvy1.X, time]; ehvy1.Y = [ehvx1.Y, des_v1(2)];
             thvz1.X = [thvz1.X, time]; thvz1.Y = [thvx1.Y, true_v1(3)];
             ehvz1.X = [ehvz1.X, time]; ehvz1.Y = [ehvx1.Y, des_v1(3)];
-     
-            thvx2.X = [thvx2.X, time]; thvx2.Y = [thvx2.Y, true_v2(1)];
-            ehvx2.X = [ehvx2.X, time]; ehvx2.Y = [ehvx2.Y, des_v2(1)];
-            thvy2.X = [thvy2.X, time]; thvy2.Y = [thvy2.Y, true_v2(2)];
-            ehvy2.X = [ehvy2.X, time]; ehvy2.Y = [ehvy2.Y, des_v2(2)];
-            thvz2.X = [thvz2.X, time]; thvz2.Y = [thvz2.Y, true_v2(3)];
-            ehvz2.X = [ehvz2.X, time]; ehvz2.Y = [ehvz2.Y, des_v2(3)];
             
-            thvx3.X = [thvx3.X, time]; thvx3.Y = [thvx3.Y, true_v3(1)];
-            ehvx3.X = [ehvx3.X, time]; ehvx3.Y = [ehvx3.Y, des_v3(1)];
-            thvy3.X = [thvy3.X, time]; thvy3.Y = [thvy3.Y, true_v3(2)];
-            ehvy3.X = [ehvy3.X, time]; ehvy3.Y = [ehvy3.Y, des_v3(12)];
-            thvz3.X = [thvz3.X, time]; thvz3.Y = [thvz3.Y, true_v3(3)];
-            ehvz3.X = [ehvz3.X, time]; ehvz3.Y = [ehvz3.Y, des_v3(3)];
-           
-            thvx4.X = [thvx4.X, time]; thvx4.Y = [thvx4.Y, true_v4(1)];
-            ehvx4.X = [ehvx4.X, time]; ehvx4.Y = [ehvx4.Y, des_v4(1)];
-            thvy4.X = [thvy4.X, time]; thvy4.Y = [thvy4.Y, true_v4(2)];
-            ehvy4.X = [ehvy4.X, time]; ehvy4.Y = [ehvy4.Y, des_v4(2)];
-            thvz4.X = [thvz4.X, time]; thvz4.Y = [thvz4.Y, true_v4(3)];
-            ehvz4.X = [ehvz4.X, time]; ehvz4.Y = [ehvz4.Y, des_v4(3)];
+            thvx2.X = [thvx2.X, time]; thvx2.Y = [thvx1.Y, true_v2(1)];
+            ehvx2.X = [ehvx2.X, time]; ehvx2.Y = [ehvx1.Y, des_v2(1)];
+            thvy2.X = [thvy2.X, time]; thvy2.Y = [thvx1.Y, true_v2(2)];
+            ehvy2.X = [ehvy2.X, time]; ehvy2.Y = [ehvx1.Y, des_v2(2)];
+            thvz2.X = [thvz2.X, time]; thvz2.Y = [thvx1.Y, true_v2(3)];
+            ehvz2.X = [ehvz2.X, time]; ehvz2.Y = [ehvx1.Y, des_v2(3)];
             
-            thvx5.X = [thvx5.X, time]; thvx5.Y = [thvx5.Y, true_v5(1)];
-            ehvx5.X = [ehvx5.X, time]; ehvx5.Y = [ehvx5.Y, des_v5(1)];
-            thvy5.X = [thvy5.X, time]; thvy5.Y = [thvy5.Y, true_v5(2)];
-            ehvy5.X = [ehvy5.X, time]; ehvy5.Y = [ehvy5.Y, des_v5(2)];
-            thvz5.X = [thvz5.X, time]; thvz5.Y = [thvz5.Y, true_v5(3)];
-            ehvz5.X = [ehvz5.X, time]; ehvz5.Y = [ehvz5.Y, des_v5(3)];
+            thvx3.X = [thvx3.X, time]; thvx3.Y = [thvx1.Y, true_v3(1)];
+            ehvx3.X = [ehvx3.X, time]; ehvx3.Y = [ehvx1.Y, des_v3(1)];
+            thvy3.X = [thvy3.X, time]; thvy3.Y = [thvx1.Y, true_v3(2)];
+            ehvy3.X = [ehvy3.X, time]; ehvy3.Y = [ehvx1.Y, des_v3(12)];
+            thvz3.X = [thvz3.X, time]; thvz3.Y = [thvx1.Y, true_v3(3)];
+            ehvz3.X = [ehvz3.X, time]; ehvz3.Y = [ehvx1.Y, des_v3(3)];
             
-            thvx6.X = [thvx6.X, time]; thvx6.Y = [thvx6.Y, true_v6(1)];
-            ehvx6.X = [ehvx6.X, time]; ehvx6.Y = [ehvx6.Y, des_v6(1)];
-            thvy6.X = [thvy6.X, time]; thvy6.Y = [thvy6.Y, true_v6(2)];
-            ehvy6.X = [ehvy6.X, time]; ehvy6.Y = [ehvy6.Y, des_v6(2)];
-            thvz6.X = [thvz6.X, time]; thvz6.Y = [thvz6.Y, true_v6(3)];
-            ehvz6.X = [ehvz6.X, time]; ehvz6.Y = [ehvz6.Y, des_v6(3)];
+            thvx4.X = [thvx4.X, time]; thvx4.Y = [thvx1.Y, true_v4(1)];
+            ehvx4.X = [ehvx4.X, time]; ehvx4.Y = [ehvx1.Y, des_v4(1)];
+            thvy4.X = [thvy4.X, time]; thvy4.Y = [thvx1.Y, true_v4(2)];
+            ehvy4.X = [ehvy4.X, time]; ehvy4.Y = [ehvx1.Y, des_v4(2)];
+            thvz4.X = [thvz4.X, time]; thvz4.Y = [thvx1.Y, true_v4(3)];
+            ehvz4.X = [ehvz4.X, time]; ehvz4.Y = [ehvx1.Y, des_v4(3)];
+            
+            thvx5.X = [thvx5.X, time]; thvx5.Y = [thvx1.Y, true_v5(1)];
+            ehvx5.X = [ehvx5.X, time]; ehvx5.Y = [ehvx1.Y, des_v5(1)];
+            thvy5.X = [thvy5.X, time]; thvy5.Y = [thvx1.Y, true_v5(2)];
+            ehvy5.X = [ehvy5.X, time]; ehvy5.Y = [ehvx1.Y, des_v5(2)];
+            thvz5.X = [thvz5.X, time]; thvz5.Y = [thvx1.Y, true_v5(3)];
+            ehvz5.X = [ehvz5.X, time]; ehvz5.Y = [ehvx1.Y, des_v5(3)];
+            
+            thvx6.X = [thvx6.X, time]; thvx6.Y = [thvx1.Y, true_v6(1)];
+            ehvx6.X = [ehvx6.X, time]; ehvx6.Y = [thvx1.Y, des_v6(1)];
+            thvy6.X = [thvy6.X, time]; thvy6.Y = [thvx1.Y, true_v6(2)];
+            ehvy6.X = [ehvy6.X, time]; ehvy6.Y = [thvx1.Y, des_v6(2)];
+            thvz6.X = [thvz6.X, time]; thvz6.Y = [thvx1.Y, true_v6(3)];
+            ehvz6.X = [ehvz6.X, time]; ehvz6.Y = [thvx1.Y, des_v6(3)];
         end
             
           
@@ -1116,93 +1120,6 @@ while (1)
         
         true_p6 = true_s(1:3, 6);
         des_p6 = s_des(1:3, 6);
-        
-        if ~pis_init 
-            thpx1.X = time; thpx1.Y = true_p1(1);
-            ehpx1.X = time; ehpx1.Y = des_p1(1);
-            thpy1.X = time; thpy1.Y = true_p1(2);
-            ehpy1.X = time; ehpy1.Y = des_p1(2);
-            thpz1.X = time; thpz1.Y = true_p1(3);
-            ehpz1.X = time; ehpz1.Y = des_p1(3);
-            
-            thpx2.X = time; thpx2.Y = true_p2(1);
-            ehpx2.X = time; ehpx2.Y = des_p2(1);
-            thpy2.X = time; thpy2.Y = true_p2(2);
-            ehpy2.X = time; ehpy2.Y = des_p2(2);
-            thpz2.X = time; thpz2.Y = true_p2(3);
-            ehpz2.X = time; ehpz2.Y = des_p2(3);
-            
-            thpx3.X = time; thpx3.Y = true_p3(1);
-            ehpx3.X = time; ehpx3.Y = des_p3(1);
-            thpy3.X = time; thpy3.Y = true_p3(2);
-            ehpy3.X = time; ehpy3.Y = des_p3(12);
-            thpz3.X = time; thpz3.Y = true_p3(3);
-            ehpz3.X = time; ehpz3.Y = des_p3(3);
-            
-            thpx4.X = time; thpx4.Y = true_p4(1);
-            ehpx4.X = time; ehpx4.Y = des_p4(1);
-            thpy4.X = time; thpy4.Y = true_p4(2);
-            ehpy4.X = time; ehpy4.Y = des_p4(2);
-            thpz4.X = time; thpz4.Y = true_p4(3);
-            ehpz4.X = time; ehpz4.Y = des_p4(3);
-            
-            thpx5.X = time; thpx5.Y = true_p5(1);
-            ehpx5.X = time; ehpx5.Y = des_p5(1);
-            thpy5.X = time; thpy5.Y = true_p5(2);
-            ehpy5.X = time; ehpy5.Y = des_p5(2);
-            thpz5.X = time; thpz5.Y = true_p5(3);
-            ehpz5.X = time; ehpz5.Y = des_p5(3);
-            
-            thpx6.X = time; thpx6.Y = true_p6(1);
-            ehpx6.X = time; ehpx6.Y = des_p6(1);
-            thpy6.X = time; thpy6.Y = true_p6(2);
-            ehpy6.X = time; ehpy6.Y = des_p6(2);
-            thpz6.X = time; thpz6.Y = true_p6(3);
-            ehpz6.X = time; ehpz6.Y = des_p6(3);
-        else
-            thpx1.X = [thpx1.X, time]; thpx1.Y = [thpx1.Y, true_p1(1)];
-            ehpx1.X = [ehpx1.X, time]; ehpx1.Y = [ehpx1.Y, des_p1(1)];
-            thpy1.X = [thpy1.X, time]; thpy1.Y = [thpx1.Y, true_p1(2)];
-            ehpy1.X = [ehpy1.X, time]; ehpy1.Y = [ehpx1.Y, des_p1(2)];
-            thpz1.X = [thpz1.X, time]; thpz1.Y = [thpx1.Y, true_p1(3)];
-            ehpz1.X = [ehpz1.X, time]; ehpz1.Y = [ehpx1.Y, des_p1(3)];
-     
-            thpx2.X = [thpx2.X, time]; thpx2.Y = [thpx2.Y, true_p2(1)];
-            ehpx2.X = [ehpx2.X, time]; ehpx2.Y = [ehpx2.Y, des_p2(1)];
-            thpy2.X = [thpy2.X, time]; thpy2.Y = [thpy2.Y, true_p2(2)];
-            ehpy2.X = [ehpy2.X, time]; ehpy2.Y = [ehpy2.Y, des_p2(2)];
-            thpz2.X = [thpz2.X, time]; thpz2.Y = [thpz2.Y, true_p2(3)];
-            ehpz2.X = [ehpz2.X, time]; ehpz2.Y = [ehpz2.Y, des_p2(3)];
-            
-            thpx3.X = [thpx3.X, time]; thpx3.Y = [thpx3.Y, true_p3(1)];
-            ehpx3.X = [ehpx3.X, time]; ehpx3.Y = [ehpx3.Y, des_p3(1)];
-            thpy3.X = [thpy3.X, time]; thpy3.Y = [thpy3.Y, true_p3(2)];
-            ehpy3.X = [ehpy3.X, time]; ehpy3.Y = [ehpy3.Y, des_p3(12)];
-            thpz3.X = [thpz3.X, time]; thpz3.Y = [thpz3.Y, true_p3(3)];
-            ehpz3.X = [ehpz3.X, time]; ehpz3.Y = [ehpz3.Y, des_p3(3)];
-           
-            thpx4.X = [thpx4.X, time]; thpx4.Y = [thpx4.Y, true_p4(1)];
-            ehpx4.X = [ehpx4.X, time]; ehpx4.Y = [ehpx4.Y, des_p4(1)];
-            thpy4.X = [thpy4.X, time]; thpy4.Y = [thpy4.Y, true_p4(2)];
-            ehpy4.X = [ehpy4.X, time]; ehpy4.Y = [ehpy4.Y, des_p4(2)];
-            thpz4.X = [thpz4.X, time]; thpz4.Y = [thpz4.Y, true_p4(3)];
-            ehpz4.X = [ehpz4.X, time]; ehpz4.Y = [ehpz4.Y, des_p4(3)];
-            
-            thpx5.X = [thpx5.X, time]; thpx5.Y = [thpx5.Y, true_p5(1)];
-            ehpx5.X = [ehpx5.X, time]; ehpx5.Y = [ehpx5.Y, des_p5(1)];
-            thpy5.X = [thpy5.X, time]; thpy5.Y = [thpy5.Y, true_p5(2)];
-            ehpy5.X = [ehpy5.X, time]; ehpy5.Y = [ehpy5.Y, des_p5(2)];
-            thpz5.X = [thpz5.X, time]; thpz5.Y = [thpz5.Y, true_p5(3)];
-            ehpz5.X = [ehpz5.X, time]; ehpz5.Y = [ehpz5.Y, des_p5(3)];
-            
-            thpx6.X = [thpx6.X, time]; thpx6.Y = [thpx6.Y, true_p6(1)];
-            ehpx6.X = [ehpx6.X, time]; ehpx6.Y = [ehpx6.Y, des_p6(1)];
-            thpy6.X = [thpy6.X, time]; thpy6.Y = [thpy6.Y, true_p6(2)];
-            ehpy6.X = [ehpy6.X, time]; ehpy6.Y = [ehpy6.Y, des_p6(2)];
-            thpz6.X = [thpz6.X, time]; thpz6.Y = [thpz6.Y, true_p6(3)];
-            ehpz6.X = [ehpz6.X, time]; ehpz6.Y = [ehpz6.Y, des_p6(3)];
-        end
-        
         %% Render
         drawnow;
         vis_time = time;
