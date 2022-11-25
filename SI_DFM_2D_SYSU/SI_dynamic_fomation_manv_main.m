@@ -4,7 +4,7 @@ close all
 
 %% Parameter Setting
 n = 6; % Number of agents
-kv = 6; % Control gain kv
+kv = 17; % Control gain kv
 
 % connection matrix
 Adj = [0, 1, 1, 0, 0, 0; ...

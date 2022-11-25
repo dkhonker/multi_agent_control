@@ -1,3 +1,4 @@
+function finalPoint=JudgeStudentsPoint()
 load '6formation_results.mat'
 
 
@@ -16,7 +17,7 @@ absPositionError = sum(abs(thtraj1.X-ehtraj1.X)+abs(thtraj1.Y-ehtraj1.Y)+abs(tht
     +abs(thtraj3.X-ehtraj3.X)+abs(thtraj3.Y-ehtraj3.Y)+abs(thtraj3.Z-ehtraj3.Z) ...
     +abs(thtraj4.X-ehtraj4.X)+abs(thtraj4.Y-ehtraj4.Y)+abs(thtraj4.Z-ehtraj4.Z) ...
     +abs(thtraj5.X-ehtraj5.X)+abs(thtraj5.Y-ehtraj5.Y)+abs(thtraj5.Z-ehtraj5.Z) ...
-    +abs(thtraj6.X-ehtraj6.X)+abs(thtraj6.Y-ehtraj6.Y)+abs(thtraj6.Z-ehtraj6.Z))
+    +abs(thtraj6.X-ehtraj6.X)+abs(thtraj6.Y-ehtraj6.Y)+abs(thtraj6.Z-ehtraj6.Z));
     
     
 
@@ -26,7 +27,8 @@ absSpeedError = sum(abs(ehvx1.Y-thvx1.Y)+abs(ehvy1.Y-thvy1.Y) ...
     +abs(ehvx3.Y-thvx3.Y)+abs(ehvy3.Y-thvy3.Y) ...
     +abs(ehvx4.Y-thvx4.Y)+abs(ehvy4.Y-thvy4.Y) ...
     +abs(ehvx5.Y-thvx5.Y)+abs(ehvy5.Y-thvy5.Y) ...
-    +abs(ehvx6.Y-thvx6.Y)+abs(ehvy6.Y-thvy6.Y))
+    +abs(ehvx6.Y-thvx6.Y)+abs(ehvy6.Y-thvy6.Y));
 
 finalPoint = k*(absPositionError + absSpeedError) / 100 + (1-k) * time;
 disp(['your performance score is: ' , num2str(finalPoint)]);    %27.9835
+end
