@@ -17,6 +17,7 @@ yaw0 = -30 * pi / 180;
 pitch0 = -30 * pi / 180;
 roll0 = -30 * pi / 180;
 Quat0 = R_to_quaternion(ypr_to_R([yaw0, pitch0, roll0])');
+
 %% quadrotor true states initialize
 x0 = [0, 0.5, -0.5, -0.5, 0, 0.5; ...
     1, 0.5, 0.5, -0.5, -1, -0.5; ...
@@ -150,14 +151,11 @@ while (1)
        save('./readonly/6formation_results.mat', 'time','thtraj1', 'ehtraj1',  'thtraj2', 'ehtraj2', 'thtraj3', 'ehtraj3', ...
             'thtraj4', 'ehtraj4','thtraj5', 'ehtraj5', 'thtraj6', 'ehtraj6', 'thvx1', 'ehvx1', 'thvx2', 'ehvx2','thvx3', 'ehvx3', ...
             'thvx4', 'ehvx4','thvx5', 'ehvx5','thvx6', 'ehvx6','thvy1', 'ehvy1','thvy2', 'ehvy2','thvy3', 'ehvy3','thvy4', 'ehvy4', ...
-            'thvy5', 'ehvy5', 'thvy6', 'ehvy6');
+            'thvy5', 'ehvy5', 'thvy6', 'ehvy6', 'x0');
        disp("simulation complete!");
         break;
     end
-    disp("here");
-    disp(i);
-    disp("time");
-    disp(length(t));
+
     %% Rlot Results
     if time - vis_time > vstep        
         ll = 0.175 / 3;
@@ -224,7 +222,6 @@ while (1)
             ehtraj1.Y = [ehtraj1.Y, s_des(2,1)];
             ehtraj1.Z = [ehtraj1.Z, s_des(3,1)];
         end
-        disp("here1");
         %---
 
 

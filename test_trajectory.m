@@ -6,6 +6,7 @@ clear all
 clc;
 addpath('./utils', './readonly','./SI_DFM_2D_SYSU');
 
-run6formation;
+
+run6formation();
 
 JudgeStudentsPoint
